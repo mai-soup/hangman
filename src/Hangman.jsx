@@ -11,7 +11,11 @@ import image9 from "./assets/9.jpg";
 import image10 from "./assets/10.jpg";
 
 const Hangman = () => {
-  return <h1>HANGMAN!!</h1>;
+  return (
+    <div>
+      <img src={image0} alt="0/10" />
+    </div>
+  );
 };
 
 export default Hangman;
