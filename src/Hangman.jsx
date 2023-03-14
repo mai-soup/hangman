@@ -57,10 +57,13 @@ const Hangman = ({ maxMistakes = 10 }) => {
   const won = answer === guess.join("");
   return (
     <div className="flex flex-col justify-center h-4/5 w-full sm:w-4/5 lg:w-1/3">
+      <h1 className="text-6xl mb-2 text-[#FFB703] font-bold text-shadow shadow-[#fb8500]">
+        Hangman
+      </h1>
       <img
         src={imgs[wrongGuesses]}
         alt={`${wrongGuesses}/${maxMistakes}`}
-        className="shrink"
+        className="shrink object-scale-down h-auto"
       />
       <p className="text-white text-lg">
         {wrongGuesses}/{maxMistakes}
