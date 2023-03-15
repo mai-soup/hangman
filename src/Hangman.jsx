@@ -56,8 +56,8 @@ const Hangman = ({ maxMistakes = 10 }) => {
   const lost = wrongGuesses >= maxMistakes;
   const won = answer === guess.join("");
   return (
-    <div className="flex flex-col justify-center h-screen w-full sm:w-4/5 lg:w-1/2 items-center">
-      <h1 className="text-4xl md:text-6xl mb-2 text-[#FFB703] font-bold text-shadow shadow-[#fb8500]">
+    <div className="flex flex-col justify-center h-screen w-full sm:w-4/5 lg:w-1/2 items-center py-5">
+      <h1 className="text-4xl md:text-6xl my-4 text-[#FFB703] font-bold text-shadow shadow-[#fb8500]">
         Hangman
       </h1>
       <img
@@ -79,7 +79,7 @@ const Hangman = ({ maxMistakes = 10 }) => {
       )}
       {won && <p className="text-white text-2xl my-2">Congratulations!</p>}
       {!lost && !won ? (
-        <div>
+        <div className="my-3">
           {letters.map(row => (
             <LetterRow
               key={row}
